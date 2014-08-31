@@ -1,6 +1,6 @@
 # Vagrant ENV Plugin
 
-This is a [Vagrant](http://www.vagrantup.com) plugin to load environment variables from .env into ENV 
+This is a [Vagrant](http://www.vagrantup.com) plugin to load environment variables from .env into ENV. For more on how and why we use this plugin, please see http://kn0t.ch/vagrant-env-intro
 
 ## Usage
 
