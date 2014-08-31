@@ -18,7 +18,7 @@ module VagrantPlugins
         Vagrant plugin to load environment variables from .env into ENV
       DESC
 
-      config "dotenv" do
+      config "env" do
         require_relative "config"
         Config
       end

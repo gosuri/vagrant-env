@@ -16,10 +16,11 @@ After installing, add your application configuration to your .env file in the ro
 $ echo BOX_NAME=foo > .env
 ```
 
-And then make a Vagrantfile that looks like the following, filling in your information where necessary.
+And then make a Vagrantfile that looks like the following, make sure to add `config.env.enable` and fill in your information where necessary. 
 
 ```
 Vagrant.configure("2") do |config|
+  config.env.enable
   config.vm.box = ENV['BOX_NAME']
 end
 ```
@@ -27,8 +28,8 @@ end
 You may also add export in front of each line so you can source the file in bash:
 
 ```
-export S3_BUCKET=YOURS3BUCKET
-export SECRET_KEY=YOURSECRETKEYGOESHERE
+export AWS_ACCESS_ID=YOURACCESSIDGOESHERE
+export AWS_SECRET_ACCESS_ID=YOURSECRETKEYGOESHERE
 ```
 
 ### Should I commit my .env file?
