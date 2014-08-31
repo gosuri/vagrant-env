@@ -20,6 +20,7 @@ And then make a Vagrantfile that looks like the following, filling in your infor
 
 ```
 Vagrant.configure("2") do |config|
+  congig.env.enable
   config.vm.box = ENV['BOX_NAME']
 end
 ```
@@ -27,8 +28,8 @@ end
 You may also add export in front of each line so you can source the file in bash:
 
 ```
-export S3_BUCKET=YOURS3BUCKET
-export SECRET_KEY=YOURSECRETKEYGOESHERE
+export AWS_ACCESS_ID=YOURACCESSIDGOESHERE
+export AWS_SECRET_ACCESS_ID=YOURSECRETKEYGOESHERE
 ```
 
 ### Should I commit my .env file?
