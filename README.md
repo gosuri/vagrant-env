@@ -21,10 +21,10 @@ To install an older version of the plugin use `vagrant plugin install vagrant-en
 After installing, add your application configuration to your .env file in the root of your project
 
 ```sh
-$ echo BOX_NAME=foo > .env
+$ echo BOX_NAME=hashicorp/precise64 > .env
 ```
 
-Create a a Vagrantfile that looks like the following, ensure to add `config.env.enable` and fill in your information where necessary. Check out [example/Vagrantfile](example/Vagrantfile) for reference
+Create a a Vagrantfile that looks like the following, ensure to add `config.env.enable` and fill in your information where necessary. Check out [example](example/) for reference
 
 ```ruby
 Vagrant.configure("2") do |config|
