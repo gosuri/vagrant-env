@@ -12,6 +12,4 @@
 *.o
 *.a
 mkmf.log
-Vagrantfile
 .vagrant
-.env
