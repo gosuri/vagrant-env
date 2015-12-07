@@ -1,14 +1,24 @@
 # Vagrant ENV Plugin
 
-This is a [Vagrant](http://www.vagrantup.com) plugin to load environment variables from .env into ENV. For more on how and why we use this plugin, please see http://kn0t.ch/vagrant-env-intro
+This is a [Vagrant](http://www.vagrantup.com) plugin to load environment variables from .env into ENV. 
 
-## Usage
+More information on why and how we use this plugin is detailed in this [post](http://www.gregosuri.com/2014/08/31/introducing-vagrant-env-plugin/)
 
-Install using standard Vagrant plugin installation methods. 
+## Requirements
 
-```
+* Vagrant 1.7.4 or higher
+
+## Installation
+
+Install the lastest version using standard vagrant plugin installation method:
+
+```sh
 $ vagrant plugin install vagrant-env
 ```
+
+To install an older version of the plugin use `vagrant plugin install vagrant-env --plugin-version VERSION`
+
+## Usage
 
 After installing, add your application configuration to your .env file in the root of your project
 
@@ -16,16 +26,16 @@ After installing, add your application configuration to your .env file in the ro
 $ echo BOX_NAME=foo > .env
 ```
 
-And then make a Vagrantfile that looks like the following, make sure to add `config.env.enable` and fill in your information where necessary. 
+Create a a Vagrantfile that looks like the following, ensure to add `config.env.enable` and fill in your information where necessary. Check out [example/Vagrantfile](example/Vagrantfile) for reference
 
 ```
 Vagrant.configure("2") do |config|
-  config.env.enable
+  config.env.enable # enable the plugin
   config.vm.box = ENV['BOX_NAME']
 end
 ```
 
-You may also add export in front of each line so you can source the file in bash:
+Additionally, You may also add export in front of each line so you can source the file in bash:
 
 ```
 export AWS_ACCESS_ID=YOURACCESSIDGOESHERE
