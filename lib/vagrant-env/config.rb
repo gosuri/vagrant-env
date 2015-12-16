@@ -8,7 +8,7 @@ module VagrantPlugins
       # config.env.enable __FILE__
       def enable(vagrantfile = nil)
         if vagrantfile
-          load File.dirname(vagrantfile) + '/.env'
+          load File.join File.dirname(vagrantfile), '.env'
         else
           # The default is .env in the current directory - but that may not be
           # the same directory that the Vagrantfile is in
