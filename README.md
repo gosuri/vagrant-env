@@ -29,7 +29,7 @@ Create a a Vagrantfile that looks like the following, ensure to add `config.env.
 ```ruby
 Vagrant.configure("2") do |config|
   config.env.enable # enable the plugin
-  config.vm.box = ENV['BOX_NAME']
+  config.vm.box = #{ENV['BOX_NAME']}
 end
 ```
 
