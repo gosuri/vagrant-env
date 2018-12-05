@@ -1,19 +1,19 @@
 begin
   require "vagrant"
 rescue LoadError
-  raise "The Vagrant ENV plugin must be run within Vagrant."
+  raise "The Vagrant READENV plugin must be run within Vagrant."
 end
 
 # This is a sanity check to make sure no one is attempting to install
 # this into an early Vagrant version.
 if Vagrant::VERSION < "1.2.0"
-  raise "The Vagrant ENV plugin is only compatible with Vagrant 1.2+"
+  raise "The Vagrant READENV plugin is only compatible with Vagrant 1.2+"
 end
 
 module VagrantPlugins
-  module Env
+  module ReadEnv
     class Plugin < Vagrant.plugin("2")
-      name "ENV"
+      name "READENV"
       description <<-DESC
         Vagrant plugin to load environment variables from .env into ENV
       DESC
