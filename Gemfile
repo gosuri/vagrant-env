@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in vagrant-env.gemspec
+# Specify your gem's dependencies in vagrant-readenv.gemspec
 gemspec
 
 group :development do
@@ -9,5 +9,5 @@ group :development do
 end
 
 group :plugins do
-  gem "vagrant-env", path: "."
+  gem "vagrant-readenv", path: "."
 end
