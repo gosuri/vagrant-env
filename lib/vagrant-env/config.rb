@@ -1,7 +1,7 @@
 require 'dotenv'
 
 module VagrantPlugins
-  module Env
+  module ReadEnv
     class Config < Vagrant.plugin("2", :config)
 
       # Simple interface:
