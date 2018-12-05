@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'vagrant-env/version'
+require 'vagrant-readenv/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "vagrant-env"
+  spec.name          = "vagrant-readenv"
   spec.version       = VagrantPlugins::Env::VERSION
   spec.authors       = ["Greg Osuri"]
   spec.email         = ["greg@overclock.io"]
   spec.summary       = %q{Vagrant plugin to load environment variables from .env into ENV}
   spec.description   = %q{Vagrant plugin to load environment variables from .env into ENV}
-  spec.homepage      = "http://github.com/gosuri/vagrant-env"
+  spec.homepage      = "http://github.com/groovenectar/vagrant-readenv"
   spec.license       = "MIT"
   spec.files         = %w(README.md LICENSE.txt
                       vagrant-env.gemspec
