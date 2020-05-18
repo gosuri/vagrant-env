@@ -40,6 +40,16 @@ export AWS_ACCESS_ID=YOURACCESSIDGOESHERE
 export AWS_SECRET_ACCESS_ID=YOURSECRETKEYGOESHERE
 ```
 
+Local path support for `.env` files:
+
+```ruby
+Vagrant.configure("2") do |config|
+  config.env.enable # enable the plugin
+  config.env.load 'my/path/.env' # custom path
+  config.vm.box = ENV['BOX_NAME']
+end
+```
+
 ### Should I commit my .env file?
 
 It is recommended that you store development-only settings in your .env file, and commit it to your repository. Make sure that all your credentials for your development environment are different from your other deployments. This makes it easy for other developers to get started on your project, without compromising your credentials for other environments.
